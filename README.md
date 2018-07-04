@@ -1,20 +1,11 @@
-# Memory Game Project
+# Pixel Perfect
 
 ## Table of Contents
-
 * [Instructions](#instructions)
 * [Contributing](#contributing)
 
 ## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+To use Memory Master, you may download on your local device or access it via [GitHub Pages](https://pages.github.com/).
 
 ## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+This repository is based off of [Udacity's](https://udacity.com) Memory project in the [Front End Web Developer Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001). Pull requests are welcome, but will likely not be accepted at this time. 
