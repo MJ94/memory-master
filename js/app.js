@@ -2,6 +2,7 @@
  * Create a list that holds all of your cards
  */
 
+let allCards = document.querySelectorAll(".card");
 
 /*
  * Display the cards on the page
@@ -36,3 +37,9 @@ function shuffle(array) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
+
+for (let i = 0; i < allCards.length; i++) {
+    allCards[i].addEventListener("click", function () {
+        this.classList.add('open', "show");
+    })
+}
