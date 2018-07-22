@@ -42,6 +42,10 @@ cardDeck.addEventListener("click", event => {
     if (clickTarget.classList.contains('card') && openCards.length < 2) {
         toggleCards(clickTarget);
         addToggledCard(clickTarget);
+
+        if (openCards.length === 2) {
+            checkMatch();
+        }
     }
 });
 
@@ -53,4 +57,15 @@ const toggleCards = clickTarget => {
 // TODO: Clear array after checking for match
 const addToggledCard = clickTarget => {
     openCards.push(clickTarget);
+};
+
+const checkMatch = () => {
+    if (
+        openCards[0].firstElementChild.className ===
+        openCards[1].firstElementChild.className
+    ) {
+        console.log("This is a match!")
+    } else {
+        console.log("This is not a match.")
+    }
 };
