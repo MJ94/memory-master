@@ -64,8 +64,13 @@ const checkMatch = () => {
         openCards[0].firstElementChild.className ===
         openCards[1].firstElementChild.className
     ) {
-        console.log("This is a match!")
+        openCards[0].classList.toggle("match");
+        openCards[1].classList.toggle("match");
+        toggleCards(openCards[0]);
+        toggleCards(openCards[1]);
+        openCards = [];
     } else {
         console.log("This is not a match.")
+        // TODO: Toggle cards and remove from openCards array
     }
 };
