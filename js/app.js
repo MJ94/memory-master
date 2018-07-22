@@ -11,7 +11,7 @@ let cardDeck = document.querySelector(".deck");
  *   - add each card's HTML to the page
  */
 
-// Shuffle function from http://stackoverflow.com/a/2450976
+/* Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -24,8 +24,7 @@ function shuffle(array) {
     }
 
     return array;
-}
-
+} */
 
 /*
  * set up the event listener for a card. If a card is clicked:
