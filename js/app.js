@@ -45,12 +45,12 @@ cardDeck.addEventListener("click", event => {
     }
 });
 
-const toggleCards = (clickTarget) => {
+const toggleCards = clickTarget => {
     clickTarget.classList.toggle("open");
     clickTarget.classList.toggle("show");
 };
 
 // TODO: Clear array after checking for match
-const addToggledCard = (clickTarget) => {
+const addToggledCard = clickTarget => {
     openCards.push(clickTarget);
 };
