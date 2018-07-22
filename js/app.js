@@ -39,7 +39,11 @@ function shuffle(array) {
 cardDeck.addEventListener("click", event => {
     const clickTarget = event.target;
     if (clickTarget.classList.contains('card')) {
-        clickTarget.classList.toggle("open");
-        clickTarget.classList.toggle("show");
+        toggleCards(clickTarget);
     }
 });
+
+const toggleCards = (clickTarget) => {
+    clickTarget.classList.toggle("open");
+    clickTarget.classList.toggle("show");
+};
