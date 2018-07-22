@@ -4,6 +4,8 @@
 
 let cardDeck = document.querySelector(".deck");
 
+let openCards = [];
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -28,7 +30,6 @@ function shuffle(array) {
 
 /*
  * set up the event listener for a card. If a card is clicked:
- *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
  *  - if the list already has another card, check to see if the two cards match
  *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
  *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
@@ -40,10 +41,16 @@ cardDeck.addEventListener("click", event => {
     const clickTarget = event.target;
     if (clickTarget.classList.contains('card')) {
         toggleCards(clickTarget);
+        addToggledCard(clickTarget);
     }
 });
 
 const toggleCards = (clickTarget) => {
     clickTarget.classList.toggle("open");
     clickTarget.classList.toggle("show");
+};
+
+// TODO: Disallow more than two cards in array at once and clear array after checking for match
+const addToggledCard = (clickTarget) => {
+    openCards.push(clickTarget);
 };
