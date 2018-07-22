@@ -39,7 +39,7 @@ function shuffle(array) {
 
 cardDeck.addEventListener("click", event => {
     const clickTarget = event.target;
-    if (clickTarget.classList.contains('card')) {
+    if (clickTarget.classList.contains('card') && openCards.length < 2) {
         toggleCards(clickTarget);
         addToggledCard(clickTarget);
     }
@@ -50,7 +50,7 @@ const toggleCards = (clickTarget) => {
     clickTarget.classList.toggle("show");
 };
 
-// TODO: Disallow more than two cards in array at once and clear array after checking for match
+// TODO: Clear array after checking for match
 const addToggledCard = (clickTarget) => {
     openCards.push(clickTarget);
 };
