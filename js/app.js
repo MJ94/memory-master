@@ -39,7 +39,7 @@ function shuffle(array) {
 
 cardDeck.addEventListener("click", event => {
     const clickTarget = event.target;
-    if (clickTarget.classList.contains('card') && openCards.length < 2) {
+    if (clickTarget.classList.contains('card') && openCards.length < 2 && !openCards.includes(clickTarget)) {
         toggleCards(clickTarget);
         addToggledCard(clickTarget);
 
