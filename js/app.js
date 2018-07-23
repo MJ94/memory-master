@@ -39,10 +39,7 @@ function shuffle(array) {
 
 cardDeck.addEventListener("click", event => {
     const clickTarget = event.target;
-    if (clickTarget.classList.contains('card') &&
-        !clickTarget.classList.contains("match") &&
-        openCards.length < 2 &&
-        !openCards.includes(clickTarget)) {
+    if (isClickValid(clickTarget)) {
         toggleCards(clickTarget);
         addToggledCard(clickTarget);
 
@@ -78,4 +75,13 @@ const checkMatch = () => {
             openCards = [];
         }, 1000);
     }
+};
+
+const isClickValid = clickTarget => {
+    return (
+        clickTarget.classList.contains('card') &&
+        !clickTarget.classList.contains("match") &&
+        openCards.length < 2 &&
+        !openCards.includes(clickTarget)
+    );
 };
