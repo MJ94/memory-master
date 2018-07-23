@@ -54,7 +54,6 @@ const toggleCards = clickTarget => {
     clickTarget.classList.toggle("show");
 };
 
-// TODO: Clear array after checking for match
 const addToggledCard = clickTarget => {
     openCards.push(clickTarget);
 };
@@ -70,7 +69,10 @@ const checkMatch = () => {
         toggleCards(openCards[1]);
         openCards = [];
     } else {
-        console.log("This is not a match.")
-        // TODO: Toggle cards and remove from openCards array
+        setTimeout(() => {
+            toggleCards(openCards[0]);
+            toggleCards(openCards[1]);
+            openCards = [];
+        }, 1000);
     }
 };
