@@ -13,9 +13,9 @@ let openCards = [];
  *   - add each card's HTML to the page
  */
 
-/* Shuffle function from http://stackoverflow.com/a/2450976
+// Shuffle function modified from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -26,7 +26,7 @@ function shuffle(array) {
     }
 
     return array;
-} */
+}
 
 /*
  * set up the event listener for a card. If a card is clicked:
@@ -82,3 +82,14 @@ const isClickValid = clickTarget => {
         !openCards.includes(clickTarget)
     );
 };
+
+const shuffleDeck = () => {
+    const cardsToShuffle = Array.from(document.querySelectorAll(".card"));
+    const shuffledCards = shuffle(cardsToShuffle);
+    console.log(shuffledCards);
+    for (card of shuffledCards) {
+        cardDeck.appendChild(card);
+    }
+};
+
+shuffleDeck();
