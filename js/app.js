@@ -3,15 +3,8 @@
  */
 
 let cardDeck = document.querySelector(".deck");
-
 let openCards = [];
 
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
 
 // Shuffle function modified from http://stackoverflow.com/a/2450976
 function shuffle(array) {
