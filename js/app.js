@@ -1,7 +1,3 @@
-/*
- * Create a list that holds all of your cards
- */
-
 let cardDeck = document.querySelector(".deck");
 let openCards = [];
 
