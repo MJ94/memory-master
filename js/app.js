@@ -32,6 +32,7 @@ cardDeck.addEventListener("click", event => {
         if (openCards.length === 2) {
             checkMatch();
             addMove();
+            checkScore();
         }
     }
 });
@@ -93,3 +94,19 @@ const addMove = () => {
             movesText.innerHTML = `${moves} Moves`
         }
     };
+
+const hideStar = () => {
+    const stars = document.querySelectorAll(".stars li");
+    for (star of stars) {
+        if (star.style.display !== "none") {
+            star.style.display = "none";
+            break;
+        }
+    }
+};
+
+const checkScore = () => {
+    if (moves === 15 || moves === 22) {
+        hideStar();
+    }
+};
