@@ -77,7 +77,6 @@ const isClickValid = clickTarget => {
 const shuffleDeck = () => {
     const cardsToShuffle = Array.from(document.querySelectorAll(".card"));
     const shuffledCards = shuffle(cardsToShuffle);
-    console.log(shuffledCards);
     for (card of shuffledCards) {
         cardDeck.appendChild(card);
     }
