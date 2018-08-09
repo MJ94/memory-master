@@ -119,6 +119,17 @@ const checkScore = () => {
 const startTimer = () => {
     let clockId = setInterval(() => {
         time++;
-        console.log(time);
+        showTime();
     }, 1000);
+};
+
+const showTime = () => {
+    const clock = document.querySelector(".clock");
+    let minutes = Math.floor(time / 60);
+    let seconds = Math.floor(time % 60);
+    if (seconds < 10) {
+        clock.innerHTML = `${minutes}:0${seconds}`;
+    } else {
+        clock.innerHTML = `${minutes}:${seconds}`;
+    }
 };
