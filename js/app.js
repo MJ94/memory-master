@@ -1,6 +1,7 @@
 let cardDeck = document.querySelector(".deck");
 let openCards = [];
 let moves = 0;
+let clockId;
 let clockOff = true;
 let time = 0;
 
@@ -117,10 +118,14 @@ const checkScore = () => {
 };
 
 const startTimer = () => {
-    let clockId = setInterval(() => {
+    clockId = setInterval(() => {
         time++;
         showTime();
     }, 1000);
+};
+
+const stopTimer = () => {
+    clearInterval(clockId)
 };
 
 const showTime = () => {
