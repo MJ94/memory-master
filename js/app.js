@@ -1,6 +1,8 @@
 let cardDeck = document.querySelector(".deck");
 let openCards = [];
 let moves = 0;
+let clockOff = true;
+let time = 0;
 
 
 // Shuffle function modified from http://stackoverflow.com/a/2450976
@@ -28,6 +30,10 @@ cardDeck.addEventListener("click", event => {
     if (isClickValid(clickTarget)) {
         toggleCards(clickTarget);
         addToggledCard(clickTarget);
+        if (clockOff) {
+            startTimer();
+            clockOff = true;
+        }
 
         if (openCards.length === 2) {
             checkMatch();
@@ -108,4 +114,11 @@ const checkScore = () => {
     if (moves === 15 || moves === 22) {
         hideStar();
     }
+};
+
+const startTimer = () => {
+    let clockId = setInterval(() => {
+        time++;
+        console.log(time);
+    }, 1000);
 };
