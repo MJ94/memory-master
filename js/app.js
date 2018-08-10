@@ -1,5 +1,7 @@
 let cardDeck = document.querySelector(".deck");
 let movesText = document.querySelector(".moves");
+const stars = document.querySelectorAll(".stars li");
+let numOfStars = 0;
 const cancel = document.querySelector(".modal_cancel");
 const restart = document.querySelector(".modal_restart");
 let openCards = [];
@@ -105,7 +107,6 @@ const addMove = () => {
     };
 
 const hideStar = () => {
-    const stars = document.querySelectorAll(".stars li");
     for (star of stars) {
         if (star.style.display !== "none") {
             star.style.display = "none";
@@ -115,8 +116,6 @@ const hideStar = () => {
 };
 
 const countStars = () => {
-    const stars = document.querySelectorAll(".stars li");
-    let numOfStars = 0;
     for (star of stars) {
         if (star.style.display !== 'none') {
             numOfStars++;
@@ -180,6 +179,7 @@ restart.addEventListener("click", () => {
     // TODO: Add function to restart everything.
     resetClockAndTime();
     resetMoves();
+    resetStars();
 });
 
 const resetClockAndTime = () => {
@@ -191,6 +191,13 @@ const resetClockAndTime = () => {
 const resetMoves = () => {
   moves = 0;
   movesText.innerHTML = `${moves} Moves`;
+};
+
+const resetStars =  () => {
+    numOfStars = 0;
+    for (star of stars) {
+        star.style.display = 'inline';
+    }
 };
 
 const gameOver = () => {
