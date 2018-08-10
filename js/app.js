@@ -176,10 +176,10 @@ cancel.addEventListener("click", () => {
 );
 
 restart.addEventListener("click", () => {
-    // TODO: Add function to restart everything.
     resetClockAndTime();
     resetMoves();
     resetStars();
+    shuffleDeck();
 });
 
 const resetClockAndTime = () => {
