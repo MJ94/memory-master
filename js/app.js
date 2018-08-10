@@ -23,11 +23,6 @@ function shuffle(array) {
     return array;
 }
 
-/*
- * set up the event listener for a card. If a card is clicked:
- *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
- */
-
 cardDeck.addEventListener("click", event => {
     const clickTarget = event.target;
     if (isClickValid(clickTarget)) {
