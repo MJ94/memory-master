@@ -144,3 +144,8 @@ const showTime = () => {
         clock.innerHTML = `${minutes}:${seconds}`;
     }
 };
+
+const toggleModal = () => {
+    const modal = document.querySelector(".modal_background");
+    modal.classList.toggle("hide");
+};
