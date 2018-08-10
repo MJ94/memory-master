@@ -141,3 +141,14 @@ h1 {
     padding: 1rem;
     border-bottom: 1px solid gray;
 }
+
+.modal_buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.modal_individual_buttons {
+    height: 30px;
+    width: 60px;
+}
