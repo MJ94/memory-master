@@ -1,4 +1,5 @@
 let cardDeck = document.querySelector(".deck");
+let movesText = document.querySelector(".moves");
 const cancel = document.querySelector(".modal_cancel");
 const restart = document.querySelector(".modal_restart");
 let openCards = [];
@@ -96,7 +97,6 @@ shuffleDeck();
 
 const addMove = () => {
     moves++;
-    const movesText = document.querySelector(".moves");
     if (moves === 1) {
         movesText.innerHTML = `${moves} Move`
     } else {
@@ -179,12 +179,18 @@ cancel.addEventListener("click", () => {
 restart.addEventListener("click", () => {
     // TODO: Add function to restart everything.
     resetClockAndTime();
+    resetMoves();
 });
 
 const resetClockAndTime = () => {
     stopTimer();
     time = 0;
     showTime();
+};
+
+const resetMoves = () => {
+  moves = 0;
+  movesText.innerHTML = `${moves} Moves`;
 };
 
 const gameOver = () => {
