@@ -4,6 +4,8 @@ let moves = 0;
 let clockId;
 let clockOff = true;
 let time = 0;
+let matched = 0;
+const TOTAL_PAIRS = 8;
 
 
 // Shuffle function modified from http://stackoverflow.com/a/2450976
@@ -63,6 +65,10 @@ const checkMatch = () => {
         toggleCards(openCards[0]);
         toggleCards(openCards[1]);
         openCards = [];
+        matched++;
+        if (matched === TOTAL_PAIRS) {
+            // TODO: Execute functions at game's end.
+        }
     } else {
         setTimeout(() => {
             toggleCards(openCards[0]);
