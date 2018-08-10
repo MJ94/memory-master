@@ -206,6 +206,7 @@ const resetClockAndTime = () => {
 };
 
 const resetMoves = () => {
+    matched = 0;
     moves = 0;
     movesText.innerHTML = `${moves} Moves`;
 };
