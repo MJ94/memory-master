@@ -176,11 +176,15 @@ cancelModal.addEventListener("click", () => {
 );
 
 restartModal.addEventListener("click", () => {
+    resetGame();
+});
+
+const resetGame = () => {
     resetClockAndTime();
     resetMoves();
     resetStars();
     shuffleDeck();
-});
+};
 
 const resetClockAndTime = () => {
     stopTimer();
