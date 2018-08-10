@@ -178,8 +178,14 @@ cancel.addEventListener("click", () => {
 
 restart.addEventListener("click", () => {
     // TODO: Add function to restart everything.
-    console.log("Restart was clicked in the modal.");
+    resetClockAndTime();
 });
+
+const resetClockAndTime = () => {
+    stopTimer();
+    time = 0;
+    showTime();
+};
 
 const gameOver = () => {
     stopTimer();
