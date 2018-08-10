@@ -139,7 +139,7 @@ const startTimer = () => {
 };
 
 const stopTimer = () => {
-    clearInterval(clockId)
+    clearInterval(clockId);
     clockOff = true;
 };
 
