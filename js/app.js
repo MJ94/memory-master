@@ -153,8 +153,10 @@ const toggleModal = () => {
 const writeToModal = () => {
     const timeStat = document.querySelector(".modal_time");
     const clockTime = document.querySelector(".clock").innerHTML;
+    const movesStat = document.querySelector(".modal_moves");
 
     timeStat.innerHTML = `Time: ${clockTime}`;
+    movesStat.innerHTML = `Moves: ${moves}`;
 
 };
 
