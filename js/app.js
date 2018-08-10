@@ -149,3 +149,11 @@ const toggleModal = () => {
     const modal = document.querySelector(".modal_background");
     modal.classList.toggle("hide");
 };
+
+const writeToModal = () => {
+    const timeStat = document.querySelector(".modal_time");
+    const clockTime = document.querySelector(".clock").innerHTML;
+
+    timeStat.innerHTML = `Time: ${clockTime}`;
+
+};
