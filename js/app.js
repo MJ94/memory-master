@@ -1,7 +1,6 @@
 let cardDeck = document.querySelector(".deck");
 let openCards = [];
 let moves = 0;
-let numOfStars = 0;
 let clockId;
 let clockOff = true;
 let time = 0;
@@ -120,6 +119,7 @@ const hideStar = () => {
 
 const countStars = () => {
     const stars = document.querySelectorAll(".stars li");
+    let numOfStars = 0;
     for (star of stars) {
         if (star.style.display !== 'none') {
             numOfStars++;
