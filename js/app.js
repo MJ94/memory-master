@@ -178,6 +178,7 @@ cancelModal.addEventListener("click", () => {
 
 restartModal.addEventListener("click", () => {
     resetGame();
+    toggleModal();
 });
 
 mainRestartButton.addEventListener("click", () => {
