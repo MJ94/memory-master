@@ -2,6 +2,7 @@ let cardDeck = document.querySelector(".deck");
 let movesText = document.querySelector(".moves");
 const stars = document.querySelectorAll(".stars li");
 let numOfStars = 0;
+let mainRestartButton = document.querySelector(".restart");
 const cancelModal = document.querySelector(".modal_cancel");
 const restartModal = document.querySelector(".modal_restart");
 let openCards = [];
@@ -177,6 +178,10 @@ cancelModal.addEventListener("click", () => {
 
 restartModal.addEventListener("click", () => {
     resetGame();
+});
+
+mainRestartButton.addEventListener("click", () => {
+   resetGame();
 });
 
 const resetGame = () => {
