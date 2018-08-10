@@ -1,6 +1,7 @@
 let cardDeck = document.querySelector(".deck");
 let openCards = [];
 let moves = 0;
+let numOfStars = 0;
 let clockId;
 let clockOff = true;
 let time = 0;
@@ -117,6 +118,16 @@ const hideStar = () => {
     }
 };
 
+const countStars = () => {
+    const stars = document.querySelectorAll(".stars li");
+    for (star of stars) {
+        if (star.style.display !== 'none') {
+            numOfStars++;
+            return numOfStars;
+        }
+    }
+};
+
 const checkScore = () => {
     if (moves === 15 || moves === 22) {
         hideStar();
@@ -154,9 +165,11 @@ const writeToModal = () => {
     const timeStat = document.querySelector(".modal_time");
     const clockTime = document.querySelector(".clock").innerHTML;
     const movesStat = document.querySelector(".modal_moves");
+    const starsStat = document.querySelector(".modal_stars");
 
     timeStat.innerHTML = `Time: ${clockTime}`;
     movesStat.innerHTML = `Moves: ${moves}`;
+    starsStat.innerHTML = `Stars: ${countStars()}`;
 
 };
 
