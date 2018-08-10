@@ -103,9 +103,9 @@ const addMove = () => {
     if (moves === 1) {
         movesText.innerHTML = `${moves} Move`
     } else {
-            movesText.innerHTML = `${moves} Moves`
-        }
-    };
+        movesText.innerHTML = `${moves} Moves`
+    }
+};
 
 const hideStar = () => {
     for (star of stars) {
@@ -172,7 +172,7 @@ const writeToModal = () => {
 };
 
 cancelModal.addEventListener("click", () => {
-    toggleModal();
+        toggleModal();
     }
 );
 
@@ -182,7 +182,7 @@ restartModal.addEventListener("click", () => {
 });
 
 mainRestartButton.addEventListener("click", () => {
-   resetGame();
+    resetGame();
 });
 
 const resetGame = () => {
@@ -206,11 +206,11 @@ const resetClockAndTime = () => {
 };
 
 const resetMoves = () => {
-  moves = 0;
-  movesText.innerHTML = `${moves} Moves`;
+    moves = 0;
+    movesText.innerHTML = `${moves} Moves`;
 };
 
-const resetStars =  () => {
+const resetStars = () => {
     numOfStars = 0;
     for (star of stars) {
         star.style.display = 'inline';
