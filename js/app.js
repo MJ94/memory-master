@@ -2,8 +2,8 @@ let cardDeck = document.querySelector(".deck");
 let movesText = document.querySelector(".moves");
 const stars = document.querySelectorAll(".stars li");
 let numOfStars = 0;
-const cancel = document.querySelector(".modal_cancel");
-const restart = document.querySelector(".modal_restart");
+const cancelModal = document.querySelector(".modal_cancel");
+const restartModal = document.querySelector(".modal_restart");
 let openCards = [];
 let moves = 0;
 let clockId;
@@ -170,12 +170,12 @@ const writeToModal = () => {
 
 };
 
-cancel.addEventListener("click", () => {
+cancelModal.addEventListener("click", () => {
     toggleModal();
     }
 );
 
-restart.addEventListener("click", () => {
+restartModal.addEventListener("click", () => {
     resetClockAndTime();
     resetMoves();
     resetStars();
