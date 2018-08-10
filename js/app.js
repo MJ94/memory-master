@@ -35,7 +35,7 @@ cardDeck.addEventListener("click", event => {
         addToggledCard(clickTarget);
         if (clockOff) {
             startTimer();
-            clockOff = true;
+            clockOff = false;
         }
 
         if (openCards.length === 2) {
