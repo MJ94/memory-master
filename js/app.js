@@ -1,5 +1,6 @@
 let cardDeck = document.querySelector(".deck");
 const cancel = document.querySelector(".modal_cancel");
+const restart = document.querySelector(".modal_restart");
 let openCards = [];
 let moves = 0;
 let clockId;
@@ -173,6 +174,11 @@ cancel.addEventListener("click", () => {
     toggleModal();
     }
 );
+
+restart.addEventListener("click", () => {
+    // TODO: Add function to restart everything.
+    console.log("Restart was clicked in the modal.");
+});
 
 const gameOver = () => {
     stopTimer();
