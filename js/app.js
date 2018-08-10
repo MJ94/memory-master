@@ -40,8 +40,8 @@ cardDeck.addEventListener("click", event => {
         }
 
         if (openCards.length === 2) {
-            checkMatch();
             addMove();
+            checkMatch();
             checkScore();
         }
     }
