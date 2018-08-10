@@ -67,7 +67,7 @@ const checkMatch = () => {
         openCards = [];
         matched++;
         if (matched === TOTAL_PAIRS) {
-            // TODO: Execute functions at game's end.
+            gameOver();
         }
     } else {
         setTimeout(() => {
@@ -156,4 +156,10 @@ const writeToModal = () => {
 
     timeStat.innerHTML = `Time: ${clockTime}`;
 
+};
+
+const gameOver = () => {
+    stopTimer();
+    writeToModal();
+    toggleModal();
 };
