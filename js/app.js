@@ -1,4 +1,5 @@
 let cardDeck = document.querySelector(".deck");
+const cancel = document.querySelector(".modal_cancel");
 let openCards = [];
 let moves = 0;
 let clockId;
@@ -167,6 +168,11 @@ const writeToModal = () => {
     starsStat.innerHTML = `Stars: ${countStars()}`;
 
 };
+
+cancel.addEventListener("click", () => {
+    toggleModal();
+    }
+);
 
 const gameOver = () => {
     stopTimer();
