@@ -1,4 +1,5 @@
 let cardDeck = document.querySelector(".deck");
+const iterableCards = Array.from(document.querySelectorAll(".card"));
 let movesText = document.querySelector(".moves");
 const stars = document.querySelectorAll(".stars li");
 let numOfStars = 0;
@@ -89,8 +90,7 @@ const isClickValid = clickTarget => {
 };
 
 const shuffleDeck = () => {
-    const cardsToShuffle = Array.from(document.querySelectorAll(".card"));
-    const shuffledCards = shuffle(cardsToShuffle);
+    const shuffledCards = shuffle(iterableCards);
     for (card of shuffledCards) {
         cardDeck.appendChild(card);
     }
@@ -189,7 +189,14 @@ const resetGame = () => {
     resetClockAndTime();
     resetMoves();
     resetStars();
+    resetCards();
     shuffleDeck();
+};
+
+const resetCards = () => {
+    for (card of iterableCards) {
+        card.className = "card";
+    }
 };
 
 const resetClockAndTime = () => {
