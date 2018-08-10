@@ -123,9 +123,9 @@ const countStars = () => {
     for (star of stars) {
         if (star.style.display !== 'none') {
             numOfStars++;
-            return numOfStars;
         }
     }
+    return numOfStars;
 };
 
 const checkScore = () => {
